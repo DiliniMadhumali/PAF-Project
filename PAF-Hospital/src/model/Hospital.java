@@ -15,7 +15,7 @@ public class Hospital {
 
 			// Provide the correct details: DBServer/DBName, username, password
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/hos?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+					"jdbc:mysql://localhost:3306/paf_project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
 					"root", "");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,7 +32,7 @@ public class Hospital {
 			}
 			// create a prepared statement
 			String query = "insert into hospital(`hid`,`hname`,`no`,`street`,`city`,`hos_charges`)"
-					+ "values (?, ?, ?, ?, ?, ?,)";
+					+ "values (?, ?, ?, ?, ?, ?)";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			// binding values
 			preparedStmt.setInt(1, 0);
