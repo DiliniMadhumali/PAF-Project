@@ -16,7 +16,7 @@ public class Appointment {
 
 			// Provide the correct details: DBServer/DBName, username, password
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/PAF-Project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+					"jdbc:mysql://localhost:3306/paf_project?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
 					"root", "");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -129,7 +129,7 @@ public class Appointment {
 
 			output = "Updated successfully";
 		} catch (Exception e) {
-			output = "Error while updating the item.";
+			output = "Error while updating the Appointments.";
 			System.err.println(e.getMessage());
 		}
 
